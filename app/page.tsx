@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Starfield from "./p/[slug]/Starfield";
+import FloatingHearts from "./p/[slug]/FloatingHearts";
 
 export default function Home() {
   return (
     <main className="relative flex-1 overflow-hidden bg-[radial-gradient(ellipse_at_50%_0%,#2e2153,#1b1330_70%)]">
       <Starfield tint="warm" />
+      <FloatingHearts count={10} />
 
       <div className="relative z-10 flex flex-col items-center px-6 py-24 text-center">
         <span className="text-xs uppercase tracking-widest text-gold-soft font-mono">
@@ -12,7 +14,12 @@ export default function Home() {
         </span>
         <h1 className="mt-5 max-w-2xl text-4xl sm:text-6xl font-semibold leading-tight">
           A forma mais bonita de dizer{" "}
-          <em className="italic text-gold-soft">eu te amo</em>
+          <em
+            className="not-italic bg-clip-text text-transparent"
+            style={{ backgroundImage: "linear-gradient(90deg,#e8664f,#e8c692)" }}
+          >
+            eu te amo
+          </em>
         </h1>
         <p className="mt-5 text-lg text-[color:var(--muted)] max-w-lg">
           Transforme a história de vocês numa página só de vocês dois: fotos,
@@ -23,7 +30,8 @@ export default function Home() {
         <div className="mt-9 flex flex-col sm:flex-row items-center gap-4">
           <Link
             href="/criar"
-            className="inline-flex items-center gap-2 rounded-full bg-gold text-night font-semibold px-8 py-4 hover:bg-gold-soft transition-colors"
+            className="inline-flex items-center gap-2 rounded-full text-white font-semibold px-8 py-4 shadow-lg hover:brightness-110 transition-all"
+            style={{ backgroundImage: "linear-gradient(90deg,#e8664f,#c2447a)" }}
           >
             🎁 Criar meu presente
           </Link>
@@ -54,4 +62,5 @@ export default function Home() {
     </main>
   );
 }
+
 
