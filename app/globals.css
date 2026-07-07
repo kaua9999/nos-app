@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --night: #1b1330;
+  --night-2: #241a42;
+  --night-3: #2e2153;
+  --gold: #d9a85c;
+  --gold-soft: #e8c692;
+  --parchment: #f7ecdd;
+  --star: #fff8ec;
+  --muted: rgba(247, 236, 221, 0.62);
+  --line: rgba(247, 236, 221, 0.14);
+}
+
+@theme inline {
+  --color-night: var(--night);
+  --color-night-2: var(--night-2);
+  --color-night-3: var(--night-3);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-parchment: var(--parchment);
+  --color-star: var(--star);
+}
+
+html,
+body {
+  background: var(--night);
+  color: var(--parchment);
+  font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fraunces", serif;
+  color: var(--star);
+}
+
+input,
+textarea,
+select {
+  background: var(--night-2);
+  border: 1px solid var(--line);
+  color: var(--star);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--gold-soft);
+  outline-offset: 1px;
+}
+
+label {
+  font-size: 13.5px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
